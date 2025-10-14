@@ -176,9 +176,9 @@ def qimen_ju_name_chaibu(year, month, day, hour, minute):
     j_q = jq(year, month, day, hour, minute)
     jieqi_code = jieqicode_jq(j_q)
     return "{}{}局{}".format(find_yingyang,{
-        "上元":jieqi_code[0],
-        "中元":jieqi_code[1],
-        "下元":jieqi_code[2]}.get(find_yuen),
+        "上":jieqi_code[0],
+        "中":jieqi_code[1],
+        "下":jieqi_code[2]}.get(find_yuen),
         find_yuen)
 
 
@@ -837,3 +837,4 @@ if __name__ == '__main__':
     #print(zhifu_n_zhishi(year, month, day, hour, minute, 2))
     #print(zhifu_pai(year, month, day, hour, minute, 1))
     #print(zhifu_pai(year, month, day, hour, minute, 2))
+

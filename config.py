@@ -256,9 +256,8 @@ def qimen_ju_name_zhirun(year, month, day, hour, minute):
             if lunar_month in ["腊月", "冬月"]:
                 return "{}{}".format(qdict.get("其他排局1" if lunar_month == "腊月" else "當前排局"), qdict.get("三元"))
             return "{}{}".format(qdict.get("超神接氣正授排局" if solar_month > 9 else "當前排局"), qdict.get("三元"))
-
         # d <= 6 and d != 0 
-        if d <= 6:
+        if d <= 6 and d>1:
             if lunar_month in ["腊月", "冬月"]:
                 return "{}{}".format(qdict.get("其他排局1" if lunar_month == "腊月" else ("其他排局" if jQ == "冬至" else "當前排局")), qdict.get("三元"))
             if solar_month >= 9:
@@ -281,7 +280,7 @@ def qimen_ju_name_zhirun(year, month, day, hour, minute):
                 return "{}{}".format(qdict.get("其他排局1"), qdict.get("三元"))
             return "{}{}".format(qdict.get("超神接氣正授排局"), qdict.get("三元"))
         # d > 6 and d <= 9 
-        if d <= 9:
+        if d <= 9 and d > 1:
             if lunar_month in ["腊月", "冬月"]:
                 return "{}{}".format(qdict.get("當前排局" if lunar_month == "腊月" else "其他排局1"), qdict.get("三元"))
             if lunar_month == "正月":
@@ -298,7 +297,7 @@ def qimen_ju_name_zhirun(year, month, day, hour, minute):
                 return "{}{}".format(qdict.get("其他排局1" if is_wuji or lunar_day >= 20 else "當前排局"), qdict.get("三元"))
             return "{}{}".format(qdict.get("超神接氣正授排局"), qdict.get("三元"))
         # d >= 10 and d <= 15 
-        if d <= 15:
+        if d <= 15 and d > 1:
             if lunar_month in ["腊月", "冬月"]:
                 return "{}{}".format(qdict.get("其他排局1" if lunar_month == "腊月" or jQ != "冬至" else ("其他排局1" if d <= 12 else "當前排局")), qdict.get("三元"))
             if solar_month > 9:
@@ -311,7 +310,9 @@ def qimen_ju_name_zhirun(year, month, day, hour, minute):
                 return "{}{}".format(qdict.get("超神接氣正授排局"), qdict.get("三元"))
             return "{}{}".format(qdict.get("超神接氣正授排局"), qdict.get("三元"))
         # Default case
-        return "{}{}".format(qdict.get("超神接氣正授排局"), qdict.get("三元"))
+
+        if d < 0:
+            return "{}{}".format(qdict.get("超神接氣正授排局"), qdict.get("三元"))
     except Exception as e:
         raise ValueError(f"Error in qimen_ju_name_zhirun for {year}-{month}-{day} {hour}:{minute}: {str(e)}")
 
@@ -837,5 +838,6 @@ if __name__ == '__main__':
     #print(zhifu_n_zhishi(year, month, day, hour, minute, 2))
     #print(zhifu_pai(year, month, day, hour, minute, 1))
     #print(zhifu_pai(year, month, day, hour, minute, 2))
+
 
 

@@ -11,8 +11,8 @@
 [![TG](https://img.shields.io/badge/chat-on%20telegram-blue)](https://t.me/haizhonggum)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?logo=paypal&style=flat-square)](https://www.paypal.me/kinyeah)&nbsp;
 
-![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/CADAL06056497_%E9%81%81%E7%94%B2%E6%BC%94%E7%BE%A9%C2%B7%E5%8D%B7%E4%B8%89~%E5%8D%B7%E5%9B%9B.djvu/page123-452px-CADAL06056497_%E9%81%81%E7%94%B2%E6%BC%94%E7%BE%A9%C2%B7%E5%8D%B7%E4%B8%89~%E5%8D%B7%E5%9B%9B.djvu.jpg "遁甲演義陰遁七局排盤")
-![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/CADAL06056497_%E9%81%81%E7%94%B2%E6%BC%94%E7%BE%A9%C2%B7%E5%8D%B7%E4%B8%89~%E5%8D%B7%E5%9B%9B.djvu/page104-444px-CADAL06056497_%E9%81%81%E7%94%B2%E6%BC%94%E7%BE%A9%C2%B7%E5%8D%B7%E4%B8%89~%E5%8D%B7%E5%9B%9B.djvu.jpg "遁甲演義陰遁七局排盤")
+
+
 
 
 ## **1. 導讀 Introduction**︰
@@ -38,6 +38,7 @@ Qimen Dunjia is based on astronomical observations, and consists of various aspe
 	kinqimen.Qimen(year, month, day, hour).overall() (時家奇門 + 金函日家)
 	
 ```
+
 
 
 

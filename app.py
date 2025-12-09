@@ -105,13 +105,16 @@ def display(nqtext, lr, y, m, d, h, mintue, j_q, e_to_s, e_to_g, qd, qt, god, do
     print("  ／────────┬──┴─────┬─────┴──┬────────＼")
     print("／  {}{}  　 │  {}{}　 │  {}{}　 │  　 {}{}　 ＼".format(e_to_s.get("寅"),e_to_g.get("寅"),e_to_s.get("丑"),e_to_g.get("丑"),e_to_s.get("子"),e_to_g.get("子"),e_to_s.get("亥"),e_to_g.get("亥")))
     with st.expander("原始碼", True):
-        st.code(str(nqtext), None)
-        st.code(str(lr), None)
+        st.code(str(nqtext), language=None, wrap_lines=True)
+        st.code(str(lr), language=None, wrap_lines=True)
 
 with pan:
     st.header('堅奇門')
     eg = list("巽離坤震兌艮坎乾")
-    now = datetime.datetime.now(pytz.timezone('UTC'))
+    # Access the user's timezone from the context
+    user_timezone = st.context.timezone
+    now = datetime.datetime.now(pytz.timezone(user_timezone))
+    now = now - (now.dst() or datetime.timedelta(0))
     ny = now.year
     nm = now.month
     nd = now.day
